@@ -1,34 +1,25 @@
 #include <stdio.h>
 
-int main()
-{
-    char a[100] = {0};
+int main(){
+    char str[100] = {0};
+    int b = 100;
     printf("Give me a string: ");
 
-    scanf("%s", a);
+    scanf("%s", str);
 
-    if(a[0] == '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9'){
+    if((str[0] >= 'a' && str[0] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z') || str[0] == '_'){
+        for(int i=1; str[i]>='\n'; i++){
+            if((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || (str[i] == '_') || (str[i] >= '0' && str[i] <= '9'))
+                b = 0;
+            else{
+                b = 10;
+                break;
+            }
+        }
+        if(b == 0)
+            printf("Valid");
+    }else
             printf("Invalid");
-        }else if(a[1] == '-'){
-            printf("Decrement");
-        }
-
-/*    if(a[0] == '+'){
-        if(a[1] == 0){
-            printf("Addition");
-        }else if(a[1] == '+'){
-            printf("Increment");
-        }else if(a[1] == '='){
-            printf("Plus equal to");
-        }
-    }else if(a[0] == '-'){
-        if(a[1] == 0){
-            printf("Subtraction");
-        }else if(a[1] == '-'){
-            printf("Decrement");
-        }else if(a[1] == '='){
-
-        }
-    }   */
+    getch();
     return 0;
 }
