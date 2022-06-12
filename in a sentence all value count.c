@@ -7,7 +7,7 @@ int main(){
     
     for(int i = 0; str[i] == '\n'; i++){
         if(str[i] >= 0 && str[i] <= 128){
-            ans[i] = 
+            ans[str[i] += 1;
         }
     }
     getch();
