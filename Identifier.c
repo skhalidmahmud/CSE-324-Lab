@@ -7,24 +7,31 @@ int main(){
 
     scanf("%s", str);
 
-    if((str[0] >= 'a' && str[0] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z') || str[0] == '_'){
-        for(int i=1; str[i]>='\n'; i++){
-            if((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || (str[i] == '_') || (str[i] >= '0' && str[i] <= '9')){
-                b = 0;
-            }
-            else{
-                b = 10;
-                break;
-            }
-        }
-        if(b == 0){
+    if(str[1] == 0){
+        if((str[0] >= 'a' && str[0] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z') || (str[0] == '_')){
             printf("Valid");
+        }
+    }else{
+        if((str[0] >= 'a' && str[0] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z') || (str[0] == '_')){
+            for(int i=1; str[i]>='\n'; i++){
+                if((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z') || (str[i] == '_') || (str[i] >= '0' && str[i] <= '9')){
+                    b = 0;
+                }
+                else{
+                    b = 10;
+                    break;
+                }
+            }
+            if(b == 0){
+                printf("Valid");
+            }else{
+                printf("Invalid");
+            }
         }else{
             printf("Invalid");
         }
-    }else{
-        printf("Invalid");
     }
+
     getch();
     return 0;
 }
