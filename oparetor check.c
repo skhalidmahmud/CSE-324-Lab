@@ -137,13 +137,14 @@ int main()
         if(a[1] == 0){
             printf("Operators are not valid in 'C'");
         }else if(a[1] == ':'){
+
             printf("Conditional Expression");
         }else{
             printf("Operators are not valid in 'C'");
         }
     }else{
         printf("Operators are not valid in 'C'");
-    }
+    }printf(" Operator");
 
     getch();
     return 0;
