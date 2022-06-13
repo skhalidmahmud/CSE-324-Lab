@@ -13,8 +13,8 @@ void vowcon(char line[200]){
             ++consonant;
         }
     }
-    printf("  Vowels: %d", vowels);
-    printf("\n  Consonants: %d", consonant);
+    printf("Vowels: %d", vowels);
+    printf("\nConsonants: %d", consonant);
 }
 void whitespaces(char line[200]){
     int space =0;
@@ -24,11 +24,11 @@ void whitespaces(char line[200]){
             ++space;
         }
     }
-    printf("\n  White spaces: %d", space);
+    printf("\nWhite spaces: %d", space);
 }
 
 void removeWS(char line[200]){
-    printf("\n\nAfter removing extra whitespace:\n  ");
+    printf("\nAfter removing extra whitespace:\n  ");
     for (int i = 0; line[i] != '\0'; ++i){
 
         if((line[i] == ' ') && (line[i+1] == ' ')){
@@ -44,9 +44,9 @@ int main() {
     printf("Enter a line of string: ");
     fgets(line, sizeof(line), stdin);
 
+    removeWS(line);
     vowcon(line);
     whitespaces(line);
-    removeWS(line);
 
     getch();
     return 0;
