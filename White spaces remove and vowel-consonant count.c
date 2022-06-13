@@ -13,8 +13,8 @@ void vowcon(char line[200]){
             ++consonant;
         }
     }
-    printf("Vowels: %d", vowels);
-    printf("\nConsonants: %d", consonant);
+    printf("  Vowels: %d", vowels);
+    printf("\n  Consonants: %d", consonant);
 }
 void whitespaces(char line[200]){
     int space =0;
@@ -24,14 +24,14 @@ void whitespaces(char line[200]){
             ++space;
         }
     }
-    printf("\nWhite spaces: %d", space);
+    printf("\n  White spaces: %d", space);
 }
 
 /*  void removeWS(char line[200]){
     for (int i = 0; line[i] != '\0'; ++i){
         line[i] = tolower(line[i]);
         if(line[i] == ' '){
-            
+
         }
     }
 }    */
