@@ -28,7 +28,7 @@ void whitespaces(char line[200]){
 }
 
 void removeWS(char line[200]){
-    printf("After removing extra whitespace:\n  ");
+    printf("\n\nAfter removing extra whitespace:\n  ");
     for (int i = 0; line[i] != '\0'; ++i){
 
         if((line[i] == ' ') && (line[i+1] == ' ')){
@@ -48,5 +48,6 @@ int main() {
     whitespaces(line);
     removeWS(line);
 
-  return 0;
+    getch();
+    return 0;
 }
