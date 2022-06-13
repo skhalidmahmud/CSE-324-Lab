@@ -27,14 +27,16 @@ void whitespaces(char line[200]){
     printf("\n  White spaces: %d", space);
 }
 
-/*  void removeWS(char line[200]){
+void removeWS(char line[200]){
+    printf("After removing extra whitespace:\n  ");
     for (int i = 0; line[i] != '\0'; ++i){
-        line[i] = tolower(line[i]);
-        if(line[i] == ' '){
 
+        if((line[i] == ' ') && (line[i+1] == ' ')){
+        }else{
+            printf("%c", line[i]);
         }
     }
-}    */
+}
 
 int main() {
 
@@ -44,7 +46,7 @@ int main() {
 
     vowcon(line);
     whitespaces(line);
-  //  removeWS(line);
+    removeWS(line);
 
   return 0;
 }
