@@ -44,7 +44,7 @@ int main() {
     printf("Enter a line of string: ");
     fgets(line, sizeof(line), stdin);
 
-    removeWS(line);
+    removeWS(line); //Here is a problem, if u try to count before remove whitespaces, then all values are showing small letters. plz check it and then use this code. :)
     vowcon(line);
     whitespaces(line);
 
