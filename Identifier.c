@@ -11,6 +11,9 @@ int main(){
         if((str[0] >= 'a' && str[0] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z') || (str[0] == '_')){
             printf("Valid");
         }
+        else{
+            printf("Invalid");
+        }
     }else{
         if((str[0] >= 'a' && str[0] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z') || (str[0] == '_')){
             for(int i=1; str[i]>='\n'; i++){
