@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(){
-    char str[100];
+    char str[10000];
     int ans[127]={0};
     printf("Give me a sentence: ");
-    fgets(str, 100, stdin);
+    fgets(str, 10000, stdin);
 
     for(int i=0; i<=strlen(str); i++){
         ans[(int)str[i]] = ans[(int)str[i]] + 1;
@@ -16,7 +17,5 @@ int main(){
             printf("  %c : %d\n",(char)i, ans[i]);
         }
     }
-
-    getch();
     return 0;
 }
